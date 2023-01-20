@@ -1,0 +1,5 @@
+-> Need three components like ./test for Project 0
+-> spec.ts is for unit testing for specific components
+-> modules by default have access to their own components
+    -> can export in module.ts: export: [FooComponent]
+    -> then import module (not component) in other module.ts

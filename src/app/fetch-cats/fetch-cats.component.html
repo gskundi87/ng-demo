@@ -1,0 +1,15 @@
+<!-- example of a template form and two way binding using the "banana box"  -->
+<input type="number" [(ngModel)]="numCats">
+<button (click)="getCats()">Get Cats</button>
+<!-- Examples of pipes being used with string interpolation, used to format how you display your data -->
+<!-- {{catpics | json}}
+{{now | date: 'long'}} -->
+
+<div *ngFor="let pic of catpics">
+    <!-- [src] is an example of property binding -->
+    <img [src]="pic.url" width=200 alt="">
+    <button (click)="voted({id: pic.id, amount: 1})">^</button>
+    <button (click)="voted({id: pic.id, amount: -1})">v</button>
+</div>
+
+<!-- string interploation, event binding, property binding-->
