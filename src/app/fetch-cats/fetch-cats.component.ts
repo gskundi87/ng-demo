@@ -32,7 +32,7 @@ export class FetchCatsComponent implements OnInit, OnDestroy{
     const url = `https://api.thecatapi.com/v1/votes`;
     // object destructuring
     const {id, amount} = args;
-    //the above line does the same thing as the below line
+    // the above line does the same thing as the below line
     // const id = args.id, amount = args.amount;
     const payload = {"image_id": id, "value": amount}
 
@@ -43,11 +43,11 @@ export class FetchCatsComponent implements OnInit, OnDestroy{
         'x-api-key' : apikey
       }}).subscribe({
         next: (res)=> {
-            // when the request is successful, handle it her
-            console.log(res)
+          // when the request is successful, handle it her
+          console.log(res)
         },
         error: (err) => {
-          //when the response returns 4/500 codes, handle it here
+          // when the response returns 4/500 codes, handle it here
           console.error(err)
         }
       });
