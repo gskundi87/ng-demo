@@ -43,7 +43,7 @@ export class FetchCatsComponent implements OnInit, OnDestroy{
         'x-api-key' : apikey
       }}).subscribe({
         next: (res)=> {
-          // when the request is successful, handle it her
+          // when the request is successful, handle it here
           console.log(res)
         },
         error: (err) => {
